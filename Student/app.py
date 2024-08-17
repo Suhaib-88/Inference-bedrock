@@ -15,7 +15,7 @@ from botocore.exceptions import ClientError
 load_dotenv(find_dotenv())
 
 s3_client= boto3.client("s3")
-BUCKET_NAME=os.getenv("BUCKET_NAME")
+BUCKET_NAME="inference-aws-1"
 bedrock_client=boto3.client(service_name= "bedrock-runtime",aws_access_key_id=os.getenv("ACESS_KEY_ID"),
                       aws_secret_access_key=os.getenv("ACCESS_SECRET"),
                       region_name="us-west-2")
