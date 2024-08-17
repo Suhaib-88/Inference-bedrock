@@ -18,7 +18,7 @@ s3_client= boto3.client("s3")
 BUCKET_NAME=os.getenv("BUCKET_NAME")
 bedrock_client=boto3.client(service_name= "bedrock-runtime",aws_access_key_id=os.getenv("ACESS_KEY_ID"),
                       aws_secret_access_key=os.getenv("ACCESS_SECRET"),
-                      region_name=os.getenv("AWS_REGION"))
+                      region_name="us-west-2")
 bedrock_embeddings= BedrockEmbeddings(model_id="amazon.titan-embed-text-v1",client=bedrock_client)
 
 
